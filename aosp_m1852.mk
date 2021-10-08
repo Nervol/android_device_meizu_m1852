@@ -24,7 +24,6 @@ $(call inherit-product, device/meizu/m1852/m1852.mk)
 
 # Inherit some common AOSP stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
 TARGET_FACE_UNLOCK_SUPPORTED = true
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
