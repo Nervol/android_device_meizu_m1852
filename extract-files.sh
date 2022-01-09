@@ -67,6 +67,11 @@ function blob_fixup() {
     vendor/lib/libmms_hal_vstab.so | vendor/lib/camera/components/com.inv.node.eis.so | vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti)
         sed -i "s|libgui.so|libwui.so|g" "${2}"
         ;;
+    vendor/lib/hw/audio.primary.sdm710.so | vendor/lib64/hw/audio.primary.sdm710.so)
+        if [ -z $(patchelf --print-needed "${2}" | grep "libprocessgroup.so") ]; then
+            patchelf --add-needed "libprocessgroup.so" "${2}"
+        fi
+        ;;
     esac
 }
 
