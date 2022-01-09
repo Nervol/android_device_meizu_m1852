@@ -64,6 +64,9 @@ function blob_fixup() {
     vendor/lib/hw/camera.qcom.so)
         sed -i "s|libssc.so|libSSc.so|g" "${2}"
         ;;
+    vendor/lib/libmms_hal_vstab.so | vendor/lib/camera/components/com.inv.node.eis.so | vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti)
+        sed -i "s|libgui.so|libwui.so|g" "${2}"
+        ;;
     esac
 }
 
