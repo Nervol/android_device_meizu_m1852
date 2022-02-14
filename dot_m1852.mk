@@ -27,10 +27,6 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED = true
 $(call inherit-product, vendor/dot/config/common.mk)
 
-# Gapps
-TARGET_GAPPS_ARCH := arm64
-WITH_GAPPS := true
-
 # And credits to XiNGRZ again
 
 PRODUCT_NAME := dot_m1852
