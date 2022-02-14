@@ -25,11 +25,15 @@ $(call inherit-product, device/meizu/m1852/m1852.mk)
 # Inherit some common AOSP stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED = true
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/dot/config/common.mk)
+
+# Gapps
+TARGET_GAPPS_ARCH := arm64
+WITH_GAPPS := true
 
 # And credits to XiNGRZ again
 
-PRODUCT_NAME := aosp_m1852
+PRODUCT_NAME := dot_m1852
 PRODUCT_BRAND := Meizu
 PRODUCT_DEVICE := m1852
 PRODUCT_MANUFACTURER := Meizu
